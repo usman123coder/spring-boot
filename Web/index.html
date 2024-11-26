@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function changeH2Content(){
+            var h2ref = document.getElementById("title");
+            var pref = document.getElementById("content");
+
+            pref.innerText = "the dog is very lazy";
+            h2ref.innerText = "DOM Manipulation changed by JS!!!!!!!!!!!!!!!";
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1 id="title">DOM Manipulation</h1>
+        <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate perspiciatis obcaecati at maiores veniam
+            saepe dolorum! Commodi unde totam nulla!</p>
+    </div>
+    <button onclick="changeH2Content()">Click me</button>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1000px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-group .gender-label {
+            display: inline-block;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .form-group button:hover {
+            background-color: #4cae4c;
+        }
+
+        .form-group .reset-button {
+            background-color: #d9534f;
+        }
+
+        .form-group .reset-button:hover {
+            background-color: #c9302c;
+        }
+
+        .show-password {
+            cursor: pointer;
+            color: #007bff;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Gloval Institute</h1>
+        <form>
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" placeholder="Type Here...." required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" placeholder="Type Here...." required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Type here...." required>
+                <span class="show-password" onclick="togglePassword()">Show Password</span>
+            </div>
+            <div class="form-group">
+                <label for="dob">DOB:</label>
+                <input type="date" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="email">MailId:</label>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="mobile" placeholder="+91 00 ---- ----">
+            </div>
+            <div class="form-group">
+                <span class="gender-label">Gender:</span>
+                <input type="radio" name="gender" id="male" value="Male" required><label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label>
+                <input type="radio" name="gender" id="other" value="Other"><label for="other">Other</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+                <button type="reset" class="reset-button">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const showPasswordText = document.querySelector('.show-password');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                showPasswordText.textContent = 'Hide Password';
+            } else {
+                passwordField.type = 'password';
+                showPasswordText.textContent = 'Show Password';
+            }
+        }
+    </script>
+</body>
+</html>

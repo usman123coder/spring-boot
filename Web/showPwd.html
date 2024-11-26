@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(254, 211, 250);
+        }
+
+        div {
+            background-color: rgb(254, 255, 217);
+            width: 500px;
+            margin: 100px auto;
+            box-shadow: 0px 0px 20px black;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #heading{
+            text-align: center;
+        }
+
+        #form {
+            background-color: rgb(254, 255, 217);
+            width: 500px;
+            margin: 100px auto;
+            box-shadow: 0px 0px 20px black;
+            padding: 50px;
+            text-align: left;
+        }
+
+        #innerForm{
+            padding: auto;
+        }
+    </style>
+
+    <script>
+        function fnShow() {
+            var inputRef = document.getElementById("password");
+            var btnRef = document.getElementById("btn");
+
+            if (inputRef.type === "password") {
+                inputRef.type = "text";
+                btnRef.innerText = "Hide Password";
+            }
+            else {
+                inputRef.type = "password";
+                btnRef.innerText = "Show Password";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>Show/Hide Password</h2>
+        <input id="password" type="password" placeholder="Enter Password" />
+        <button id="btn" onclick="fnShow()">Show Password</button>
+    </div>
+    <div id="form">
+        <form id="innerForm">
+            <h1 id="heading">Home Page</h1><br>
+            First Name : <input type="text" placeholder="Type Here...." /><br>
+            Last Name : <input type="text" placeholder="Type Here....." /><br>
+            Password : <input id="password" type="password" placeholder="Type here...." />
+            <button id="btn" onclick="fnShow()">Show Password</button><br>
+            DOB : <input type="date" placeholder="select" /><br>
+            MailId : <input type="email" placeholder="EMail" />
+            Mobile No ; <input type="number" placeholder="+91 00 -----" />
+            <label>Gender: <input type="checkbox" name="gender" value="male"> Male <input type="checkbox" name="gender"
+                    value="female"> Female <input type="checkbox" name="gender" value="other">
+                Other</label><br>
+
+            <button>Submit</button>
+            <button>Reset</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

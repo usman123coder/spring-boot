@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createButton(){
+            var btnRef = document.createElement("button");
+            var h2ref = document.createElement("h2");
+
+            btnRef.innerText = "created by DOM";
+            h2ref.innerText = "this is h2 heading created by DOM";
+            
+            btnRef.onclick = function(){
+                btnRef.remove();
+                h2ref.remove();
+            }            
+            h2ref.style.color = "green";
+            btnRef.style.color = "black";
+            btnRef.style.backgroundColor = "yellow";
+            btnRef.style.padding = "10px 20px";
+            btnRef.style.fontWeight = "bold";
+            btnRef.style.borderRadius = "20px";
+            btnRef.style.fontSize = "15px";
+
+            document.querySelector("body").appendChild(h2ref);
+            document.querySelector("body").appendChild(btnRef);
+            
+        }
+    </script>
+</head>
+<body>
+        <h2>DOM Element</h2>
+        <!-- <button>HTML button</button> -->
+        <button onclick="createButton()">Create DOM Button</button>
+    
+</body>
+</html>
